@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react'
 const  PrototypeS1 = () => {
 
     const elementList = ["yellow", "blue", "green"]
-    const [chosenElement, SetElement] = useState ([])
+    // const [chosenElement, SetElement] = useState ([])
     const [poppupToggle, setpoppupToggle] = useState(false);
     const [hasSeenPoppup, sethasSeenPoppup] = useState(false)
     const [chosenColorBackground, setchosenColorBackground] = useState([])
