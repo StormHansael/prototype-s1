@@ -1,24 +1,4 @@
-import React, { useState, useEffect} from 'react'
-
-const  PrototypeS1 = () => {
-
-    const elementList = ["yellow", "blue", "green"]
-    // const [chosenElement, SetElement] = useState ([])
-    const [poppupToggle, setpoppupToggle] = useState(false);
-    const [hasSeenPoppup, sethasSeenPoppup] = useState(false)
-    const [chosenColorBackground, setchosenColorBackground] = useState([])
-    const [chosenColorText, setchosenColorText] = useState([])
-    const [chosenTextHeader, setchosenTextHeader] = useState([])
-    const [chosenTextContnet, setchosenTextContnet] = useState([])
-    function chooseElement() {
-        const randomIndex = Math.floor(Math.random() * elementList.length);
-        // SetElement(elementList[randomIndex]);
-        setchosenColorBackground(colorsBackground[randomIndex])
-        setchosenColorText([colorsText[randomIndex]])
-        const randomIndex2 = Math.floor(Math.random() * textContnet.length);
-        setchosenTextHeader(textHeaders[randomIndex2])
-        setchosenTextContnet(textContnet[randomIndex2])
-    }
+import React, { useState, useEffect} from 'react';
 
     // const textStyleBlue
     const colorsBackground = ["#799FFF", "#71B736", "#E59C00"]
@@ -35,12 +15,44 @@ const  PrototypeS1 = () => {
 
 
 ]
+
+const  PrototypeS1 = () => {
+
+    const elementList = ["yellow", "blue", "green"]
+    // const [chosenElement, SetElement] = useState ([])
+    const [poppupToggle, setpoppupToggle] = useState(false);
+    const [hasSeenPoppup, sethasSeenPoppup] = useState(false)
+    const [chosenColorBackground, setchosenColorBackground] = useState([])
+    const [chosenColorText, setchosenColorText] = useState([])
+    const [chosenTextHeader, setchosenTextHeader] = useState([])
+    const [chosenTextContnet, setchosenTextContnet] = useState([])
+
+    // function chooseElement() {
+    //     const randomIndex = Math.floor(Math.random() * elementList.length);
+    //     // SetElement(elementList[randomIndex]);
+    //     setchosenColorBackground(colorsBackground[randomIndex])
+    //     setchosenColorText([colorsText[randomIndex]])
+    //     const randomIndex2 = Math.floor(Math.random() * textContnet.length);
+    //     setchosenTextHeader(textHeaders[randomIndex2])
+    //     setchosenTextContnet(textContnet[randomIndex2])
+    // }
+
+
 //  test1
 
 
     useEffect(() => {
+        const chooseElement = () => {
+            const randomIndex = Math.floor(Math.random() * elementList.length);
+            setchosenColorBackground(colorsBackground[randomIndex]);
+            setchosenColorText(colorsText[randomIndex]);
+            const randomIndex2 = Math.floor(Math.random() * textContnet.length);
+            setchosenTextHeader(textHeaders[randomIndex2]);
+            setchosenTextContnet(textContnet[randomIndex2]);
+        };
+
         chooseElement();
-    }, []);
+    }, [elementList.length]);
 
     return(
         <>
