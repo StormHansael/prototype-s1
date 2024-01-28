@@ -12,7 +12,7 @@ const  PrototypeS1 = () => {
     const [chosenTextContnet, setchosenTextContnet] = useState([])
     function chooseElement() {
         const randomIndex = Math.floor(Math.random() * elementList.length);
-        SetElement(elementList[randomIndex]);
+        // SetElement(elementList[randomIndex]);
         setchosenColorBackground(colorsBackground[randomIndex])
         setchosenColorText([colorsText[randomIndex]])
         const randomIndex2 = Math.floor(Math.random() * textContnet.length);
